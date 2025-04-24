@@ -3,6 +3,25 @@
 }
 
 <div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
+    <h1>Music Store</h1>
+    <h3>La mejor musica con los mejores discos del momento</h3>
+    <img src="~/img/logo.png">
 </div>
+<section>
+<h2>Catalogo de discos</h2>
+ @foreach (Disco disco in ViewBag.Empresa.Values){
+        <div>
+        
+        
+             <img src="~/img/@disco.foto">
+            <p>@disco.nombreDisco</p>
+             <p>@disco.nombreArtista</p>
+              <p>@disco.nombreGenero</p>
+               <p>@disco.nombreProductor</p>
+        
+            <a href='@Url.Action("InfoDisco", "Home", new {id = disco.id})' alt="Ver temas del disco">Ver disco<a/>
+
+        </div>
+    }
+</section>
+

@@ -15,6 +15,15 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Empresa.inicializarDisco();
+        Dictionary<string, Disco> discos = Empresa.discos;
+        ViewBag.Empresa = discos;
         return View();
+    }
+    public IActionResult MostrarDiscos(string id){
+        if (Empresa.discos.ContainsKey(id)){
+          ViewBag.disco= Empresa.discos[id];
+        }
+        return View("InfoDisco");
     }
 }
