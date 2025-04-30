@@ -21,6 +21,7 @@ public class HomeController : Controller
         return View();
     }
     public IActionResult MostrarDiscos(string id){
+        Empresa.inicializarDisco();
         if (Empresa.discos.ContainsKey(id)){
           ViewBag.disco= Empresa.discos[id];
         }

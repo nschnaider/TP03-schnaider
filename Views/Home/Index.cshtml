@@ -11,17 +11,14 @@
 <h2>Catalogo de discos</h2>
  @foreach (Disco disco in ViewBag.Empresa.Values){
         <div>
-        
-        
              <img src="~/img/@disco.foto">
             <p>@disco.nombreDisco</p>
              <p>@disco.nombreArtista</p>
               <p>@disco.nombreGenero</p>
                <p>@disco.nombreProductor</p>
         
-            <a href='@Url.Action("InfoDisco", "Home", new {id = disco.id})' alt="Ver temas del disco">Ver disco<a/>
+            <a href='@Url.Action("MostrarDiscos", "Home", new {id = disco.id})' alt="Ver temas del disco">Ver disco<a/>
 
         </div>
     }
 </section>
-
