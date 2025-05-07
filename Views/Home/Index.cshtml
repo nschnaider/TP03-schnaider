@@ -1,24 +1,25 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
-
+<main>
 <div>
     <h1>Music Store</h1>
     <h3>La mejor musica con los mejores discos del momento</h3>
     <img src="~/img/logo.png">
 </div>
-<section>
+<section  class="Menu">
 <h2>Catalogo de discos</h2>
  @foreach (Disco disco in ViewBag.Empresa.Values){
         <div>
              <img src="~/img/@disco.foto">
-            <p>@disco.nombreDisco</p>
-             <p>@disco.nombreArtista</p>
-              <p>@disco.nombreGenero</p>
-               <p>@disco.nombreProductor</p>
+            <pre>@disco.nombreDisco</pre>
+             <pre>@disco.nombreArtista</pre>
+              <pre>@disco.nombreGenero</pre>
+               <pre>@disco.nombreProductor</pre>
         
             <a href='@Url.Action("MostrarDiscos", "Home", new {id = disco.id})' alt="Ver temas del disco">Ver disco<a/>
 
         </div>
     }
 </section>
+</main>

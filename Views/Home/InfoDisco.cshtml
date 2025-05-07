@@ -6,7 +6,11 @@
     <h5>Productor: @ViewBag.disco.nombreProductor</h5>
     <img src="~/img/@ViewBag.disco.foto">
     <h2>Lista de temas</h2>
-    
+    @foreach (string tema in ViewBag.disco.listaTemas){
+        <div>
+            <li>@tema</li>
+        </div>
+    }
     
 </div>
 
