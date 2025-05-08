@@ -15,9 +15,10 @@
   text-decoration: underline;
 }
 .Menu div{
-  margin-left: 20px;
+  margin-left: 1%;
   float: left;
-  width: 25%;
+  width: 30%;
+  padding-bottom: 20px;
   height: 25%;
   margin-top: 20px;
   border: 1px solid black;
@@ -30,6 +31,7 @@
 .Menu div pre{
   background-color: rgb(255, 255, 255);
   color: black;
+  margin-left: 20px;
 }
 .Menu a{
   text-decoration: none;
@@ -37,7 +39,9 @@
   background-color: blue;
   border-radius: 20px;
   width: 15%;
-  
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
 }
 
 html {
