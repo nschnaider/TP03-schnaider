@@ -1,16 +1,21 @@
+<header class = "disco">
+<a href = '@Url.Action("Index", "Home")'> <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></a>
 <div>
-    
+    <section>
     <h1>@ViewBag.disco.nombreDisco</h1>
     <h5>Artista: @ViewBag.disco.nombreArtista</h5>
     <h5>Género: @ViewBag.disco.nombreGenero</h5>
     <h5>Productor: @ViewBag.disco.nombreProductor</h5>
     <img src="~/img/@ViewBag.disco.foto">
+    </section>
+    <div>
     <h2>Lista de temas</h2>
     @foreach (string tema in ViewBag.disco.listaTemas){
         <div>
             <li>@tema</li>
         </div>
     }
-    
+    </div>
 </div>
+</header>
 
